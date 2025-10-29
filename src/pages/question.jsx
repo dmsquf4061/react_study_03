@@ -9,46 +9,46 @@ function QuestionPage() {
         </div>
         <div className="w-full p-20">
             <div className="">
-                <div className="flex justify-between">
-                    <div>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
-                    <div className=''>
+                <div className="flex justify-between items-center h-25">
+                    <div className='text-white text-3xl'>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
+                    <div className='text-stone-500'>
                         <ChevronDown size={36} />
                     </div>
                 </div>
-                <div className='text-left'>
+                <div className='text-left text-stone-500 hidden'>
                     티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기
                 </div>
             </div>
             <div className="border-t border-stone-800">
-                <div className="flex justify-between">
-                    <div>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
-                    <div className=''>
+                <div className="flex justify-between items-center h-25">
+                    <div className='text-white text-3xl'>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
+                    <div className='text-stone-500'>
                         <ChevronDown size={36} />
                     </div>
                 </div>
-                <div className='text-left'>
+                <div className='text-left text-stone-500 hidden'>
                     티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기
                 </div>
             </div>
             <div className="border-t border-stone-800">
-                <div className="flex justify-between">
-                    <div>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
-                    <div className='text-left'>
+                <div className="flex justify-between items-center h-25">
+                    <div className='text-white text-3xl'>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
+                    <div className='text-stone-500'>
                         <ChevronDown size={36} />
                     </div>
                 </div>
-                <div className='text-left'>
+                <div className='text-left text-stone-500 hidden'>
                     티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기
                 </div>
             </div>
             <div className="border-t border-stone-800">
-                <div className="flex justify-between">
-                    <div>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
-                    <div className='text-left'>
+                <div className="flex justify-between items-center h-25">
+                    <div className='text-white text-3xl'>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
+                    <div className='text-stone-500'>
                         <ChevronDown size={36} />
                     </div>
                 </div>
-                <div className='text-left'>
+                <div className='text-left text-stone-500 hidden'>
                     티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기
                 </div>
             </div>
