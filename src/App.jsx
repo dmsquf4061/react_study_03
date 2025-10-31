@@ -1,14 +1,14 @@
-import reactLogo from './assets/react.svg'
+
 import './App.css'
 
 import Gnb from './components/common/gnb';
 import LandingPage from './pages/landing';
-import SeriesPage from './pages/series';
-import ContentPage from './pages/content';
-import VideoPage from './pages/video';
-import LoginPage from './pages/login';
-import QuestionPage from './pages/question'
-import FootergPage from './pages/footer';
+import SeriesPage from './components/pages/landing/section/series';
+import ContentPage from './components/pages/landing/section/content';
+import VideoSection from './components/pages/landing/section/video';
+import CtaSection from './components/pages/landing/section/cta';
+import QnaSection from './components/pages/landing/section/qna'
+import Footer from './components/common/footer';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
 
       {/* 본문 */}
       <LandingPage />
-
+s
       {/* 시리즈 */}
       <SeriesPage />
 
@@ -26,16 +26,16 @@ function App() {
       <ContentPage />
 
       {/* 비디오 */}
-      <VideoPage />
+      <VideoSection />
 
       {/* 티빙 로그인 */}
-      <LoginPage />
+      <CtaSection />
 
       {/* 쿠폰 등록하기 */}
-      <QuestionPage />
+      <QnaSection />
 
       {/* 풋터 */}
-      <FootergPage />
+      <Footer />
     </div>
   )
 }
