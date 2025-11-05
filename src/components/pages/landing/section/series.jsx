@@ -9,7 +9,7 @@ import SeriesImg3 from '/public/resource/series/img3.jpg'
 
 function SeriesPage() {
   return (
-    <section className="flex flex-col w-full gap-10 md:gap-15">
+    <section className="flex flex-col justify-center w-full h-[380px] md:h-[1000px] gap-10 md:gap-15">
         <div className="flex flex-col gap-1 md:gap-8">
             <h1 className="text-white font-bold text-xl md:text-5xl">티빙 오리지널 시리즈</h1>
             <div className="flex flex-col text-white text-xs md:text-2xl gap-1">
@@ -17,7 +17,7 @@ function SeriesPage() {
                 <span>오리지널 콘텐츠를 감상해 보세요.</span>
             </div>
         </div>
-        <Swiper className='w-full bg-white flex items-center'
+        <Swiper className='w-xs md:w-full bg-white flex items-center rounded-2xl md:rounded-none'
             spaceBetween={0}
             slidesPerView={3}
             breakpoints={{

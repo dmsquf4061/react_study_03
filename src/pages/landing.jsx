@@ -1,6 +1,6 @@
 function LandingPage() {
   return (
-    <main className="w-full h-full">
+    <main className="w-full h-[350px] md:h-[1000px]">
         <section className="relative flex flex-col w-full items-center">
             {/* 메인 히어로 백그라운드 */}
             <div className="w-full max-h-[80vh] overflow-hidden">

@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="w-full flex flex-col px-3 md:px-18 gap-4 md:gap-8 pt-5 md:pt-10 pb-10 md:pb-15 border-t border-stone-800">
         {/* 버튼 그룹 영역 */}
-        <div className="flex w-full h-full items-center justify-between">
+        <div className="flex w-full h-full items-start justify-between">
             {/* 버튼 그룹 영역 */}
             <div className="flex flex-wrap items-center gap-2 md:gap-8 w-[50%]">
                 <button className='text-[9px] md:text-lg font-medium text-stone-400 hover:text-white'>
@@ -48,7 +48,7 @@ function Footer() {
             </div>
         </div>
         {/* 사업자 정보 */}
-        <div className='flex flex-col font-medium text-[9px] md:text-lg text-stone-500 gap-1 w-full items-start'>
+        <div className='flex flex-col font-medium text-[8px] md:text-lg text-stone-500 gap-1 w-full items-start'>
             <p className='flex flex-wrap text-left'><span>대표이사 : 최주희 사업자정보확인 </span><span>사업자등록번호 : 188-88-01893 </span><span>통신판매신고번호 : 2020-서울마포-3641호</span></p>
             <p className='flex flex-wrap text-left'><span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동) </span><span>호스팅사업자 : 아마존웹서비시즈코리아 유한책임회사</span></p>
             <p className='flex flex-wrap text-left'><span>고객센터 (평일 09시~18시/공휴일 휴무) 챗봇/채팅 상담 1:1게시판 문의 대표메일 : tving@cj.net </span><span>유료 ARS : 1670-1525 (음성/메시지 안내)</span></p>

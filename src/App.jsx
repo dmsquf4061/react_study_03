@@ -10,32 +10,65 @@ import CtaSection from './components/pages/landing/section/cta';
 import QnaSection from './components/pages/landing/section/qna'
 import Footer from './components/common/footer';
 
+import { useEffect, useState } from 'react'; 
+
 function App() {
+  const [box, setBox] = useState("red-900");
+  const [text, setText] = useState("레드");
+
+  const boxButton = () => {
+    console.log("클릭됨");
+
+    if (box === "red-900") {
+      setText("스톤");
+      setBox("stone-500");   
+    } else {
+      setText("레드");
+      setBox("red-900");    
+    }
+  };
+
+  useEffect(() => {
+    console.log("클릭 두번 됨");
+  }, [box]);
+
+
   return (
     <div className="flex flex-col w-full h-full bg-black">
       {/* 헤더 */}
-      <Gnb />
+      {/* <Gnb /> */}
 
       {/* 본문 */}
-      <LandingPage />
-s
+      {/* <LandingPage /> */}
+
       {/* 시리즈 */}
-      <SeriesPage />
+      {/* <SeriesPage /> */}
 
       {/* 콘텐츠 */}
-      <ContentPage />
+      {/* <ContentPage /> */}
 
       {/* 비디오 */}
-      <VideoSection />
+      {/* <VideoSection /> */}
 
       {/* 티빙 로그인 */}
-      <CtaSection />
+      {/* <CtaSection /> */}
 
       {/* 쿠폰 등록하기 */}
-      <QnaSection />
+      {/* <QnaSection /> */}
 
       {/* 풋터 */}
-      <Footer />
+      {/* <Footer /> */}
+
+
+
+
+
+      <div
+        className={`w-[400px] h-[400px] rounded-sm bg-${box} cursor-pointer`}
+        onClick={boxButton}
+      >
+        {text}
+      </div>
     </div>
   )
 }

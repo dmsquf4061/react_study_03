@@ -2,7 +2,7 @@ import TvingLogoW from '/tving_logo_w.svg'
 
 function CtaSection() {
   return (
-    <section className="flex flex-col w-full pt-15 md:pt-30">
+    <section className="flex flex-col justify-center w-full h-[380px] md:h-[1000px]">
         <div className="flex flex-col gap-1 md:gap-8 items-center">
             <div className="w-[100px] md:w-xs">
                 <img className="w-full" src={TvingLogoW} alt="로고" />

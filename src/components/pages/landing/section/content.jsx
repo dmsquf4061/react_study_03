@@ -11,7 +11,7 @@ import ContentImg10 from '/public/resource/content/img10.webp'
 
 function ContentPage() {
   return (
-    <section className="flex flex-col w-full gap-10 md:gap-15 pt-15 md:pt-30">
+    <section className="flex flex-col justify-center w-full h-[380px] md:h-[1000px] gap-10 md:gap-15">
         <div className="flex flex-col gap-1 md:gap-8">
             <h1 className="text-white font-bold text-xl md:text-5xl">요즘 뜨는 모든 콘텐츠</h1>
             <div className="flex flex-col text-white text-xs md:text-2xl gap-1">
@@ -20,77 +20,77 @@ function ContentPage() {
             </div>
         </div>
         <div className='flex flex-col'>
-            <div className='relative flex h-[100px] md:h-[300px] w-full'>
+            <div className='relative flex h-[65px] md:h-[300px] w-full'>
                 <ul className='flex absolute animate-[firstFlow_29.5s_linear_infinite]'>
-                    <li className="flex">
-                        <div className="rounded-lg">
+                    <li className="flex gap-2 md:gap-4">
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg1} alt="" />
                         </div>
-                        <div className="rounded-lg">
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg2} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg3} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg4} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg5} alt="" />
                         </div>
                     </li>
-                    <li className="flex hidden">
-                        <div className="rounded-lg">
+                    <li className="flex hidden gap-2 md:gap-4">
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg1} alt="" />
                         </div>
-                        <div className="rounded-lg">
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg2} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg3} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg4} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg5} alt="" />
                         </div>
                     </li>
                 </ul>
             </div>    
-            <div className='relative flex h-[100px] md:h-[300px] w-full'>
+            <div className='relative flex h-[65px] md:h-[300px] w-full'>
                 <ul className='flex absolute animate-[firstFlow_29.5s_linear_infinite]'>
-                    <li className="flex">
-                        <div>
+                    <li className="flex gap-2 md:gap-4">
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg6} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg7} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg8} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg9} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg10} alt="" />
                         </div>
                     </li>
-                    <li className="flex hidden">
-                        <div>
+                    <li className="flex hidden gap-2 md:gap-4">
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg6} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg7} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg8} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg9} alt="" />
                         </div>
-                        <div>
+                        <div className="rounded-sm md:rounded-lg overflow-hidden">
                             <img src={ContentImg10} alt="" />
                         </div>
                     </li>
