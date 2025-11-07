@@ -1,9 +1,7 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-function QnaSection() {
-
-    const qnaData = [
+const qnaData = [
         {
         title : '[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기',
         desc : '티빙 AI 챗봇이 새롭게 오픈했어요! 365일 24시간, 언제든 셀프로 궁금한 점을 쉽고 빠르게 해결해 보세요. 챗봇만으로 해결이 어려운 경우에는 채팅 상담사에게 문의해 주세요.'},
@@ -36,57 +34,83 @@ function QnaSection() {
         desc : '2025년 4월 2일부터 시행되는 계정 공유 정책에 따라 회원님과 함께 거주하는 동일가구 구성원에 한하여 회원님의 계정으로 티빙 서비스 이용이 허용됩니다. 동일 가구 구성원의 경우 티빙 동일가구에 포함된 기기로 서비스 이용할 수 있습니다.'
         },
     ];
-    
-    const [desc, setDesc] = useState('close');
 
-    const toggleDesc = () => {
-        console.log ('이놈은 토글Desc 함수');
-        if (desc == 'close') {
-            setDesc('open');
-        } else {
-            setDesc ('close');
-        }
-    }
+function QnaSection() {    
+
+    // 첫번째
+    // const [qnatoggle, setQnatoggle] = useState(null);
+
+    // console.log ('호출됨?');
+
+    // const toggleQna = (index) => {
+    //     console.log ('index?' , index);
+    //     setQnatoggle(index);
+    // }
+    
+    // useEffect(() => {
+    //     console.log ('변경됨?' , qnatoggle);
+    // }, [qnatoggle]);
+
+    // 두번째
+    const [qnatoggle, setQnatoggle] = useState([false, false, false, false, false, false, false, false]);
+    
+    console.log ('호출됨?');
+
+    const toggleQna = (index) => {
+        console.log ('index?' , index);
+        setQnatoggle((prev) => {
+            return prev.map((i, idx) => {
+                if (index == idx) {
+                    return !i;
+                } else {
+                    return i;
+                }
+            })
+        });
+    };
 
     useEffect(() => {
-        console.log ('desc 변경됨');
-        console.log (desc);
-    }, [desc]);
+        console.log ('변경됨?' , qnatoggle);
+    }, [qnatoggle]);
+    
 
     return (
-        <section className="flex flex-col justify-center w-full h-[400px] md:h-[1000px] gap-8 md:gap-15 items-center">
+        <section className="flex flex-col justify-center w-full h-auto gap-8 md:gap-15 items-center">
+            {/* 타이틀 */}
             <div className="flex flex-col gap-8 items-center">
                 <h1 className="text-white font-bold text-xl md:text-5xl">자주 찾는 질문</h1>
             </div>
+
+            {/* qna 목록 */}
             <div className="w-full p-3 md:p-20">
-                <div>
-                    <div className="flex justify-between items-center h-14 md:h-25">
-                        <div className='text-stone-200 text-[10px] md:text-3xl'>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
-                        <button className='flex text-stone-600 w-[15px] md:w-[35px] hover:text-stone-100' onClick={toggleDesc}>
-                            {
-                                desc === 'close' ? <ChevronDown size={36} /> : <ChevronUp className="text-white" size={36} />
-                            }
-                        </button>
-                    </div>
-                    <div className={`text-[8px] md:text-xl text-left text-stone-500 pb-4 md:pb-6 ${desc == 'close' ? 'hidden' : ''}`}>
-                        티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기
-                    </div>
-                </div>
-                <div className="border-t border-stone-800">
-                    <div className="flex justify-between items-center h-14 md:h-25">
-                        <div className='text-stone-200 text-[10px] md:text-3xl'>[기타] 티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기</div>
-                        <button className='flex text-stone-600 w-[15px] md:w-[35px] hover:text-stone-100' onClick={toggleDesc}>
-                            {
-                                desc === 'close' ? <ChevronDown size={36} /> : <ChevronUp className="text-white" size={36} />
-                            }
-                        </button>
-                    </div>
-                    <div className={`text-[8px] md:text-xl text-left text-stone-500 pb-4 md:pb-6 ${desc == 'close' ? 'hidden' : ''}`}>
-                        티빙 고객센터 챗봇 및 실시간 채팅 상담 이용하기
-                    </div>
-                </div>
+                {/* 여기서 반복문 */}
+                {
+                    qnaData.map((i, index) => {
+                        return (
+                            <div key={i.title + '_' + index}>
+                                {/* 제목 title */}
+                                <div className="flex justify-between items-center h-14 md:h-25">
+                                    <div className='text-stone-200 text-[10px] md:text-3xl'>{i.title}</div>
+                                    <button className='flex text-stone-600 w-[15px] md:w-[35px] hover:text-stone-100' onClick={() => toggleQna(index)}>
+                                        {
+                                            // qnatoggle === index ? <ChevronUp size={36} /> : <ChevronDown className="text-white" size={36} />
+                                            qnatoggle[index] ? <ChevronUp size={36} /> : <ChevronDown className="text-white" size={36} />
+                                        }
+                                    </button>
+                                </div>
+                                {/* 설명 desc */}
+                                <div className={`text-[8px] md:text-xl text-left text-stone-500 pb-4 md:pb-6 ${qnatoggle[index] ? '' : 'hidden'}`}>
+                                    {i.desc}
+                                </div>
+                            </div>
+                        );
+
+                    })
+                }
             </div>
-            <div className="w-full h-10 md:h-20 max-w-[200px] md:max-w-lg mt-5">
+
+            {/* 쿠폰 등록 버튼 */}
+            <div className="w-full h-10 md:h-20 max-w-[200px] md:max-w-lg md:mt-5 mb-10 md:mb-20">
                 <button className="w-full h-full px-3 py-2 font-bold text-[11px] md:text-2xl bg-white rounded-sm text-black transition-colors hover:bg-stone-300">
                     쿠폰 등록하기
                 </button>
