@@ -52,8 +52,9 @@ function QnaSection() {
     // }, [qnatoggle]);
 
     // 두번째
-    const [qnatoggle, setQnatoggle] = useState([false, false, false, false, false, false, false, false]);
-    
+    //const [qnatoggle, setQnatoggle] = useState([false, false, false, false, false, false, false, false]);
+    const [qnatoggle, setQnatoggle] = useState(new Array(qnaData.length).fill(false));
+
     console.log ('호출됨?');
 
     const toggleQna = (index) => {
