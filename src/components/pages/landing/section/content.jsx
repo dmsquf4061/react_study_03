@@ -19,84 +19,94 @@ function ContentPage() {
                 <span>해외 시리즈, 애니메이션, 스포츠</span>
             </div>
         </div>
-        <div className='flex flex-col'>
-            <div className='relative flex h-[65px] md:h-[300px] w-full'>
-                <ul className='flex absolute animate-[firstFlow_29.5s_linear_infinite]'>
-                    <li className="flex gap-2 md:gap-4">
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg1} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg2} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg3} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg4} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg5} alt="" />
-                        </div>
-                    </li>
-                    <li className="flex hidden gap-2 md:gap-4">
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg1} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg2} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg3} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg4} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg5} alt="" />
-                        </div>
-                    </li>
+        <div className="flex flex-col">
+
+            {/* 첫 번째 슬라이드 */}
+            <div className="relative flex h-[65px] md:h-[300px] w-full overflow-hidden">
+                <ul className="flex absolute animate-infiniteSlideOriginal">
+                <li className="flex gap-2 md:gap-4">
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg1} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg2} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg3} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg4} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg5} alt="" />
+                    </div>
+                </li>
+
+                {/* 복제본 */}
+                <li className="flex gap-2 md:gap-4">
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg1} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg2} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg3} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg4} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg5} alt="" />
+                    </div>
+                </li>
                 </ul>
-            </div>    
-            <div className='relative flex h-[65px] md:h-[300px] w-full'>
-                <ul className='flex absolute animate-[firstFlow_29.5s_linear_infinite]'>
-                    <li className="flex gap-2 md:gap-4">
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg6} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg7} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg8} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg9} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg10} alt="" />
-                        </div>
-                    </li>
-                    <li className="flex hidden gap-2 md:gap-4">
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg6} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg7} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg8} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg9} alt="" />
-                        </div>
-                        <div className="rounded-sm md:rounded-lg overflow-hidden">
-                            <img src={ContentImg10} alt="" />
-                        </div>
-                    </li>
-                </ul>        
             </div>
+
+            {/* 두 번째 슬라이드 */}
+            <div className="relative flex h-[65px] md:h-[300px] w-full overflow-hidden">
+                <ul className="flex absolute animate-infiniteSlideCopy">
+                <li className="flex gap-2 md:gap-4">
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg6} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg7} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg8} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg9} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg10} alt="" />
+                    </div>
+                </li>
+
+                {/* 복제본 */}
+                <li className="flex gap-2 md:gap-4">
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg6} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg7} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg8} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg9} alt="" />
+                    </div>
+                    <div className="rounded-sm md:rounded-lg overflow-hidden">
+                    <img src={ContentImg10} alt="" />
+                    </div>
+                </li>
+    </ul>
+            </div>
+
         </div>
+
     </section>
   )
 }
