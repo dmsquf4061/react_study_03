@@ -1,6 +1,6 @@
 import ReactPlayer from 'react-player';
 
-function VideoPage() {
+function VideoSection() {
   return (
     <section className="flex flex-col justify-center items-center w-full gap-10 md:gap-15 px-5 py-10 md:py-20">
         <div className="flex flex-col w-full md:max-w-9/10 h-full gap-8 items-center bg-stone-500 rounded-md md:rounded-2xl">
@@ -27,4 +27,4 @@ function VideoPage() {
   )
 }
 
-export default VideoPage
+export default VideoSection

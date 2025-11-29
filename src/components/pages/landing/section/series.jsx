@@ -7,7 +7,7 @@ import SeriesImg1 from '/public/resource/series/img1.webp'
 import SeriesImg2 from '/public/resource/series/img2.jpg'
 import SeriesImg3 from '/public/resource/series/img3.jpg'
 
-function SeriesPage() {
+function SeriesSection() {
   return (
     <section className="flex flex-col justify-center w-full h-[380px] md:h-[1000px] gap-10 md:gap-15">
         <div className="flex flex-col gap-1 md:gap-8">
@@ -52,4 +52,4 @@ function SeriesPage() {
   )
 }
 
-export default SeriesPage
+export default SeriesSection
