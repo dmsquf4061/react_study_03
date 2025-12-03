@@ -10,7 +10,8 @@ function Gnb() {
 
     const LoginBtn = () => {
         console.log('로그인버튼 눌렸음')
-        if (confirm('진짜로 구독해제할까요?')) navigate('/login');
+        //if (confirm('진짜로 구독해제할까요?')) navigate('/login');
+        navigate('/login')
     };
 
     useEffect (() => {
