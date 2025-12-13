@@ -1,19 +1,8 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { LoaderCircle } from "lucide-react";
 
-function Login() {
-  // 1단계 아이디/패스워드에 입력된 값이 유효한지 체크할 수 있어야함
-  // 그러려면 각 Input에 입력된 값들이, 변경될 때마다 실시간으로 저장되어, 유효성 검사를 해야함
-  // 유효성 검사는 코드에서 우리의 로직으로 해야되니까, 그럼 각각에 입력된 값을 코드레벨에서 처리하는 과정이 필요함.
-  // 근데 기존 Input은 입력을 아무리해도, 코드로 받아올 수 없었음.
-  // 그래서, useState, useEffect(그리고 핸들러들까지)를 통해, 각각에 입력된 값을 뽑아내는 작업을 하기 위한 과정이 피룡함.
+function LoginTwo() {
 
-  // 2단계
-  // 위에서 뽑은 각각의 값을 유효성검사처리해서.
-  // 최종적으로 모두 유효한지 확인해서 valid 상태에서 true / false로 저장함.
-  // 그리고, 그 결과에 따라 로그인버튼을 최종적으로 활성화 / 비활성화 함.
-  const navigate = useNavigate();
 
   const [valid, setValid] = useState(false);
   const [idValue, setIdValue] = useState('');
@@ -26,38 +15,16 @@ function Login() {
   }, [valid]);
 
   const loginBtn = async () => {
-    // 로그인 버튼을 클릭하자마자 무조건 로딩처리.
     setIsLoading(true);
-
-    // 서버로 전송하는 로직이 필요해요
-    const result = {
-      code: 200,
-      data: {
-        message: '누구눅님 로그인 되셨어요'
-      }
-    };
-
-    // 로그인 성공 / 실패
-    if (result.code == 200) {
-      setTimeout(() => {
-        navigate('/');
-      }, 2000);
-    } else {
-      alert('비밀번호가 틀렸어요');
-      setIdValue('');
-      setPasswordValue('');
-    }
   };
-
   const handleId = (event) => {
     setIdValue(event.target.value);
   };
 
   useEffect(() => {
-    console.log(`현재 입력된 id : ${idValue}`);
-    console.log(`현재 입력된 pw : ${passwordValue}`);
+    console.log(`현재 id : ${idValue}`);
+    console.log(`현재 pw : ${passwordValue}`);
     if (idValue && passwordValue) {
-      console.log('아이디 및 비밀번호 둘다 입력됨');
       setValid(true);
     } else {
       setValid(false);
@@ -128,4 +95,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginTwo;
