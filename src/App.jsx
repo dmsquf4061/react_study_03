@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/landing';
 import LoginPage from './pages/login';
 import NotFoundPage from './pages/not-found';
+import ProgramPage from './pages/program';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage />}></Route>
           <Route path='/login' element={<LoginPage />}></Route>
+          <Route path='/program' element={<ProgramPage />}></Route>
 
           {/* 에러 페이지 */}
           <Route path='*' element={<NotFoundPage />}></Route>

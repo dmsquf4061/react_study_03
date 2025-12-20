@@ -1,5 +1,6 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import CouponModal from '../coupon/couponModal'
 
 const qnaData = [
         {
@@ -115,6 +116,7 @@ function QnaSection() {
                 <button className="w-full h-full px-3 py-2 font-bold text-[11px] md:text-2xl bg-white rounded-sm text-black transition-colors hover:bg-stone-300">
                     쿠폰 등록하기
                 </button>
+                <CouponModal />
             </div>
         </section>
     )

@@ -6,13 +6,14 @@ import VideoSection from '../components/pages/landing/section/video';
 import CtaSection from '../components/pages/landing/section/cta';
 import QnaSection from '../components/pages/landing/section/qna'
 import Footer from '../components/common/footer';
+import CouponModal from '../components/pages/landing/coupon/couponModal';
 
 function LandingPage() {
   return (
     <div className="flex flex-col w-full h-full bg-black">
       {/* 헤더 */}
       <Gnb />
-    
+
       {/* 본문 */}
       <MainSection />
 
@@ -33,8 +34,11 @@ function LandingPage() {
 
       {/* 풋터 */}
       <Footer />
+
+      {/* 쿠폰 모달 */}
+      <CouponModal/>
     </div>
   )
 }
 
-export default LandingPage
+export default LandingPage;
