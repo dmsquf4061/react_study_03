@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import CouponModal from '../coupon/couponModal'
+
 
 const qnaData = [
         {
@@ -36,7 +36,7 @@ const qnaData = [
         },
     ];
 
-function QnaSection() {    
+function QnaSection({handleOpen}) {    
 
     // 첫번째
     // const [qnatoggle, setQnatoggle] = useState(null);
@@ -106,14 +106,16 @@ function QnaSection() {
                                 </div>
                             </div>
                         );
-
                     })
                 }
             </div>
 
             {/* 쿠폰 등록 버튼 */}
             <div className="w-full h-10 md:h-20 max-w-[200px] md:max-w-lg md:mt-5 mb-10 md:mb-20">
-                <button className="w-full h-full px-3 py-2 font-bold text-[11px] md:text-2xl bg-white rounded-sm text-black transition-colors hover:bg-stone-300">
+                <button 
+                    className="w-full h-full px-3 py-2 font-bold text-[11px] md:text-2xl bg-white rounded-sm text-black transition-colors hover:bg-stone-300"
+                    onClick={handleOpen}
+                >
                     쿠폰 등록하기
                 </button>
             </div>
